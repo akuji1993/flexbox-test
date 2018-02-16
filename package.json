@@ -1,5 +1,5 @@
 {
-  "name": "flexbox-test",
+  "name": "modern-web-demos",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akuji1993/flexbox-test.git"
+    "url": "git+https://github.com/akuji1993/modern-web-demos.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/akuji1993/flexbox-test/issues"
+    "url": "https://github.com/akuji1993/modern-web-demos/issues"
   },
-  "homepage": "https://github.com/akuji1993/flexbox-test#readme",
+  "homepage": "https://github.com/akuji1993/modern-web-demos#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.1",
