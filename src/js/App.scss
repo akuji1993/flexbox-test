@@ -1,17 +1,10 @@
-body {
-  font-family: Raleway;
-  box-sizing: border-box;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-.flex-container {
+.flexContainer {
   display: flex;
   margin-top: 30px;
   padding: 0;
 }
 
-.flex-container-social {
+.flexContainerSocial {
   display: flex;
   margin-top: 30px;
   border-top: 1px solid black;
@@ -19,21 +12,21 @@ body {
   justify-content: center;
 }
 
-.social-icon {
+.socialIcon {
   flex: 0 0 64px;
   margin: 10px;
-}
 
-.social-icon:hover {
-  cursor:pointer;
+  &:hover {
+    cursor:pointer;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .flex-container {
+  .flexContainer {
     flex-wrap: wrap;
   }
 
-  .flex-item {
+  .flexItem {
     background: rgba(0,0,0,0.1);
     list-style-type: none;
     height: 30px;
@@ -42,7 +35,7 @@ body {
     text-align: center;
   }
 
-  .information-box {
+  .informationBox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -52,15 +45,15 @@ body {
     border: 1px solid black; /*border is keeping us from using 100%*/
   }
 
-  .box-1 {
+  .box1 {
     order: 2;
   }
 
-  .box-2 {
+  .box2 {
     order: 3;
   }
 
-  .box-3 {
+  .box3 {
     order: 1;
   }
 
@@ -74,13 +67,13 @@ body {
     border: 1px solid black;
   }
 
-  .article, p {
+  .article {
     flex: 0 1 98%;
     text-align: justify;
     margin: 1%;
   }
 
-  .social-icon {
+  .socialIcon {
     flex: 0 0 32px;
     height: 32px;
     margin: 10px;
@@ -89,7 +82,7 @@ body {
 
 @media screen and (min-width: 768px) {
 
-  .flex-item {
+  .flexItem {
     list-style-type: none;
     height: 50px;
     text-align: center;
@@ -100,15 +93,15 @@ body {
 
     /* Flexbox stuff */
     flex: 1 1 25%;
+
+    &:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
   }
 
-  .flex-item:hover {
-    background-color: black;
-    color: white;
-    cursor: pointer;
-  }
-
-  .information-box {
+  .informationBox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -142,5 +135,4 @@ body {
   .number {
     font-size: 20px;
   }
-
 }
