@@ -4,21 +4,9 @@
   padding: 0;
 }
 
-.flexContainerSocial {
-  display: flex;
-  margin-top: 30px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  justify-content: center;
-}
-
-.socialIcon {
-  flex: 0 0 64px;
-  margin: 10px;
-
-  &:hover {
-    cursor:pointer;
-  }
+.flexLink {
+  color: black;
+  text-decoration: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -26,7 +14,7 @@
     flex-wrap: wrap;
   }
 
-  .flexItem {
+  .flexLink {
     background: rgba(0,0,0,0.1);
     list-style-type: none;
     height: 30px;
@@ -34,55 +22,11 @@
     flex: 1 1 100%;
     text-align: center;
   }
-
-  .informationBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 97%;
-    margin: 1%;
-    height: 200px;
-    border: 1px solid black; /*border is keeping us from using 100%*/
-  }
-
-  .box1 {
-    order: 2;
-  }
-
-  .box2 {
-    order: 3;
-  }
-
-  .box3 {
-    order: 1;
-  }
-
-  .picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 1 97%;
-    margin: 1%;
-    height: 200px;
-    border: 1px solid black;
-  }
-
-  .article {
-    flex: 0 1 98%;
-    text-align: justify;
-    margin: 1%;
-  }
-
-  .socialIcon {
-    flex: 0 0 32px;
-    height: 32px;
-    margin: 10px;
-  }
 }
 
 @media screen and (min-width: 768px) {
 
-  .flexItem {
+  .flexLink {
     list-style-type: none;
     height: 50px;
     text-align: center;
@@ -99,40 +43,5 @@
       color: white;
       cursor: pointer;
     }
-  }
-
-  .informationBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 200px;
-    margin: 10px;
-    height: 200px;
-    border: 1px solid black;
-  }
-
-  .picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 1 30%;
-    border: 1px solid black;
-  }
-
-  .pictureRight {
-    margin-left: 20px;
-  }
-
-  .pictureLeft {
-    margin-right: 20px;
-  }
-
-  .article {
-    flex: 0 1 70%;
-    text-align: justify;
-  }
-
-  .number {
-    font-size: 20px;
   }
 }
