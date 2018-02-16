@@ -36,30 +36,38 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: "babel-loader",
+        include: path.join(__dirname, 'src'),
+        exclude: path.join(__dirname, 'node_modules'),
+        loader: 'babel-loader',
         options: {
           presets: ['babel-preset-env', 'react']
         }
       },
       {
         test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader'
+        ]
       },
       {
         test: /\.scss$/,
-        use: [{
-            loader: "style-loader" // creates style nodes from JS strings
-        }, {
-            loader: "css-loader" // translates CSS into CommonJS
-        }, {
-            loader: "sass-loader" // compiles Sass to CSS
-        }]
+        use: [
+          'style-loader',
+          'css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]',
+          'postcss-loader',
+          'sass-loader'
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|svg|png|jpg)$/,
+        loader: 'url-loader?limit=100000'
+      },
+      {
+        test: /\.json$/,
+        use: 'json-loader'
       }
     ]
-  },
-  plugins: [
-    new webpack.NamedModulesPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  }
 };
