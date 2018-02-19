@@ -4,7 +4,8 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --port 5001 --progress --profile --colors"
+    "dev": "webpack-dev-server --hot --inline --port 5001 --progress --profile --colors",
+    "build": "webpack --config webpack.config.js"
   },
   "repository": {
     "type": "git",
