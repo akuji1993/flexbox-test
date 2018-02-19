@@ -71,16 +71,17 @@
       animation-timing-function: linear;
       // animation-iteration-count: 3;
       animation-direction: normal;
-      // animation-fill-mode: both; 
+      // animation-fill-mode: both;
     }
 
     .animationCircle {
       position: absolute;
       left: -10%;
       width: 50px;
-      background: red;
       border-radius: 50%;
       height: 50px;
+        background: red;
+        top: 100px;
 
       &:nth-child(1) {
         animation: circle 4s linear infinite;
@@ -88,25 +89,25 @@
 
       &:nth-child(2) {
         background: blue;
-        top: 100px;
+        top: 200px;
         animation: circle 6s linear reverse infinite;
       }
 
       &:nth-child(3) {
         background: green;
-        top: 200px;
+        top: 300px;
         animation: circle 6s ease-out infinite;
       }
 
       &:nth-child(4) {
         background: yellow;
-        top: 300px;
+        top: 400px;
         animation: circle 6s ease-in-out infinite;
       }
 
       &:nth-child(5) {
         background: purple;
-        top: 400px;
+        top: 500px;
         animation: circle 6s cubic-bezier(0,1.25,1,-0.52) infinite;
       }
 

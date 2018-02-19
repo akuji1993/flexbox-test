@@ -28,6 +28,9 @@ class Animation extends React.Component {
         <h3 style={{textAlign: 'center'}}>Animations</h3>
         <div className={style.animationContainer}>
           <div className={style.animationSquare}/>
+        </div>
+        <div className={style.animationContainer}>
+          <div className={style.animationCircle}/>
           <div className={style.animationCircle}/>
           <div className={style.animationCircle}/>
           <div className={style.animationCircle}/>
