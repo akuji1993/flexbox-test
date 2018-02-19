@@ -58,6 +58,21 @@
     position: relative;
     width: 100%;
 
+    .animationSquare {
+      width: 50px;
+      height: 50px;
+      background: lime;
+      left: 0px;
+      position: absolute;
+
+      animation-name: square;
+      animation-duration: 4s;
+      animation-delay: 0.5s;
+      animation-timing-function: linear;
+      // animation-iteration-count: 3;
+      animation-direction: normal;
+    }
+
     .animationCircle {
       position: absolute;
       left: -10%;
@@ -79,21 +94,27 @@
       &:nth-child(3) {
         background: green;
         top: 200px;
-        animation: circle 6s ease-out reverse infinite;
+        animation: circle 6s ease-out infinite;
       }
 
       &:nth-child(4) {
         background: yellow;
         top: 300px;
-        animation: circle 6s ease-in-out reverse infinite;
+        animation: circle 6s ease-in-out infinite;
       }
 
       &:nth-child(5) {
         background: purple;
         top: 400px;
-        animation: circle 6s cubic-bezier(0,1.25,1,-0.52) reverse infinite;
+        animation: circle 6s cubic-bezier(0,1.25,1,-0.52) infinite;
       }
 
+    }
+
+    @keyframes square {
+      0% {left: 0%; height: 50px; width: 50px; background-color: lime}
+      50% {left: 45%; height: 80px; width: 80px; background-color: red}
+      100% {left: 90%; height: 50px; width: 50px; background-color: lime}
     }
 
     @keyframes circle {
