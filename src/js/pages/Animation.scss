@@ -1,0 +1,105 @@
+.animation {
+  .transitionContainer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+
+    .transitionBox1 {
+      flex: 0 0 50px;
+      height: 50px;
+      background: green;
+
+      &:hover {
+        background: red;
+        flex-basis: 80px;
+        height: 80px;
+        transition: all 1s;
+      }
+    }
+
+    .transitionBox2 {
+      flex: 0 0 50px;
+      margin-left: 20px;
+      height: 50px;
+      background: green;
+      transition: background-color 0.3s,
+                  flex-basis 1s,
+                  height 1s;
+
+      &:hover {
+        background: blue;
+        flex-basis: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .transformationContainer {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: flex-start;
+
+    .transformationBox {
+      flex: 0 0 50px;
+      height: 50px;
+      background: yellow;
+      transition: all 4s;
+
+      &__moved {
+        transform: translateX(500px) translateY(200px) scale(1.5) rotate(160deg);
+        background: LightSteelBlue;
+      }
+    }
+  }
+
+  .animationContainer {
+    position: relative;
+    width: 100%;
+
+    .animationCircle {
+      position: absolute;
+      left: -10%;
+      width: 50px;
+      background: red;
+      border-radius: 50%;
+      height: 50px;
+
+      &:nth-child(1) {
+        animation: circle 4s linear infinite;
+      }
+
+      &:nth-child(2) {
+        background: blue;
+        top: 100px;
+        animation: circle 6s linear reverse infinite;
+      }
+
+      &:nth-child(3) {
+        background: green;
+        top: 200px;
+        animation: circle 6s ease-out reverse infinite;
+      }
+
+      &:nth-child(4) {
+        background: yellow;
+        top: 300px;
+        animation: circle 6s ease-in-out reverse infinite;
+      }
+
+      &:nth-child(5) {
+        background: purple;
+        top: 400px;
+        animation: circle 6s cubic-bezier(0,1.25,1,-0.52) reverse infinite;
+      }
+
+    }
+
+    @keyframes circle {
+      0%{ left: -10%; height: 50px; width: 50px;  }
+      50% {height: 80px; width: 80px; }
+      100%{ left: 110%; height: 50px; width: 50px; }
+    }
+  }
+}
